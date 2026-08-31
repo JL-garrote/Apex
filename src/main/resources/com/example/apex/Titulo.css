@@ -1,0 +1,12 @@
+.title-label {
+    -fx-text-fill: #0F172A;
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+}
+
+.label {
+    -fx-text-fill: #0F172A;
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 14px;
+}

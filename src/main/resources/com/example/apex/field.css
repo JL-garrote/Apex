@@ -1,0 +1,39 @@
+.text-field,
+.password-field {
+    -fx-background-color: #FFFFFF;
+    -fx-text-fill: #0F172A;
+    -fx-prompt-text-fill: #94A3B8;
+
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 14px;
+
+    -fx-padding: 10px 14px;
+
+    -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
+
+    -fx-border-color: #CBD5E1;
+    -fx-border-width: 1px;
+}
+
+/* Cuando el usuario hace clic */
+.text-field:focused,
+.password-field:focused {
+    -fx-border-color: #2563EB;
+    -fx-border-width: 2px;
+
+    -fx-effect: dropshadow(
+        gaussian,
+        rgba(37, 99, 235, 0.18),
+        8,
+        0.2,
+        0,
+        0
+    );
+}
+
+/* Cuando pasas el ratón */
+.text-field:hover,
+.password-field:hover {
+    -fx-border-color: #94A3B8;
+}

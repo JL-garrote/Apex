@@ -1,0 +1,56 @@
+.button {
+    -fx-background-color: linear-gradient(to bottom right, #2563eb, #3b82f6);
+    -fx-text-fill: white;
+
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+
+    -fx-padding: 10px 22px;
+    -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
+
+    -fx-cursor: hand;
+
+    -fx-effect: dropshadow(
+        gaussian,
+        rgba(37, 99, 235, 0.30),
+        10,
+        0.2,
+        0,
+        4
+    );
+}
+
+.button:hover {
+    -fx-background-color: linear-gradient(to bottom right, #1d4ed8, #2563eb);
+
+    -fx-effect: dropshadow(
+        gaussian,
+        rgba(37, 99, 235, 0.45),
+        14,
+        0.25,
+        0,
+        5
+    );
+}
+
+.button:pressed {
+    -fx-background-color: #1e40af;
+
+    -fx-translate-y: 1px;
+
+    -fx-effect: dropshadow(
+        gaussian,
+        rgba(0, 0, 0, 0.20),
+        5,
+        0.2,
+        0,
+        2
+    );
+}
+
+.button:focused {
+    -fx-border-color: #93c5fd;
+    -fx-border-width: 2px;
+}
