@@ -23,18 +23,18 @@
                         <TextField fx:id="emailfield" layoutX="31.0" layoutY="254.0" prefHeight="40.0" prefWidth="282.0" styleClass="text-field" stylesheets="@field.css" />
                         <Label layoutX="43.0" layoutY="228.0" styleClass="label-text" stylesheets="@fondo.css" text="Correo Electronico" />
                         <Label layoutX="88.0" layoutY="22.0" prefHeight="45.0" prefWidth="168.0" style="-fx-font-size: 30;" styleClass="title-label" stylesheets="@fondo.css" text="Bienvenido" textAlignment="CENTER" />
-                  <TextField fx:id="emailfield1" layoutX="31.0" layoutY="179.0" prefHeight="40.0" prefWidth="282.0" styleClass="text-field" stylesheets="@field.css" />
-                  <Label layoutX="43.0" layoutY="155.0" styleClass="label-text" stylesheets="@fondo.css" text="Apellido" />
-                  <TextField fx:id="emailfield11" layoutX="31.0" layoutY="105.0" prefHeight="40.0" prefWidth="282.0" styleClass="text-field" stylesheets="@registe.css" />
-                  <Label layoutX="43.0" layoutY="80.0" styleClass="label-text" stylesheets="@fondo.css" text="Nombre" />
-                  <Label layoutX="43.0" layoutY="372.0" prefHeight="38.0" prefWidth="98.0" styleClass="label-text" stylesheets="@fondo.css" text="Telefono" />
-                  <PasswordField fx:id="passfield1" layoutX="31.0" layoutY="410.0" prefHeight="40.0" prefWidth="282.0" stylesheets="@field.css" />
-                  <RadioButton layoutX="358.0" layoutY="188.0" mnemonicParsing="false" stylesheets="@fondo.css" text="Coordinador" />
-                  <RadioButton layoutX="358.0" layoutY="217.0" mnemonicParsing="false" stylesheets="@fondo.css" text="Instructor" />
-                  <RadioButton layoutX="358.0" layoutY="246.0" mnemonicParsing="false" stylesheets="@fondo.css" text="Tutor" />
-                  <Label layoutX="379.0" layoutY="133.0" prefHeight="38.0" prefWidth="98.0" styleClass="title-label" stylesheets="@fondo.css" text="Rol" />
-                  <Label layoutX="360.0" layoutY="293.0" prefHeight="38.0" prefWidth="98.0" styleClass="label-text" stylesheets="@fondo.css" text="Sede/escuela" />
-                  <PasswordField fx:id="passfield2" layoutX="332.0" layoutY="332.0" prefHeight="40.0" prefWidth="159.0" styleClass="text-field" stylesheets="@field.css" />
+                        <TextField fx:id="emailfield1" layoutX="31.0" layoutY="179.0" prefHeight="40.0" prefWidth="282.0" styleClass="text-field" stylesheets="@field.css" />
+                        <Label layoutX="43.0" layoutY="155.0" styleClass="label-text" stylesheets="@fondo.css" text="Apellido" />
+                        <TextField fx:id="emailfield11" layoutX="31.0" layoutY="105.0" prefHeight="40.0" prefWidth="282.0" styleClass="text-field" stylesheets="@registe.css" />
+                        <Label layoutX="43.0" layoutY="80.0" styleClass="label-text" stylesheets="@fondo.css" text="Nombre" />
+                        <Label layoutX="43.0" layoutY="372.0" prefHeight="38.0" prefWidth="98.0" styleClass="label-text" stylesheets="@fondo.css" text="Telefono" />
+                        <PasswordField fx:id="passfield1" layoutX="31.0" layoutY="410.0" prefHeight="40.0" prefWidth="282.0" stylesheets="@field.css" />
+                        <RadioButton layoutX="358.0" layoutY="188.0" mnemonicParsing="false" stylesheets="@fondo.css" text="Coordinador" />
+                        <RadioButton layoutX="358.0" layoutY="217.0" mnemonicParsing="false" stylesheets="@fondo.css" text="Instructor" />
+                        <RadioButton layoutX="358.0" layoutY="246.0" mnemonicParsing="false" stylesheets="@fondo.css" text="Tutor" />
+                        <Label layoutX="379.0" layoutY="133.0" prefHeight="38.0" prefWidth="98.0" styleClass="title-label" stylesheets="@fondo.css" text="Rol" />
+                        <Label layoutX="360.0" layoutY="293.0" prefHeight="38.0" prefWidth="98.0" styleClass="label-text" stylesheets="@fondo.css" text="Sede/escuela" />
+                        <PasswordField fx:id="passfield2" layoutX="332.0" layoutY="332.0" prefHeight="40.0" prefWidth="159.0" styleClass="text-field" stylesheets="@field.css" />
                     </children>
                 </Pane>
             </children>

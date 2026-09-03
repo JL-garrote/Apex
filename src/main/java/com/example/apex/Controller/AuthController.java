@@ -18,11 +18,6 @@ import java.sql.SQLException;
 
 public class AuthController {
 
-    private static final double BASE_WIDTH = 600.0;
-    private static final double BASE_HEIGHT = 563.0;
-    private static final double MIN_SCALE = 0.85;
-    private static final double MAX_SCALE = 1.4;
-
     @FXML
     PasswordField passfield;
 
@@ -43,6 +38,10 @@ public class AuthController {
         } catch (Exception e) {
             System.err.println("Error en el controlador " + e.getMessage());
         }
+    }
+
+    public void registro() {
+
     }
 
     @FXML

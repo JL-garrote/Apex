@@ -10,7 +10,6 @@ public class Auth {
     private String URI = "jdbc:mysql://OneClub_eageryouth:54ea9f561354ab5ddbf7efc205fd9a4d357bf3f5@sy3gmd.h.filess.io:61001/OneClub_eageryouth";
     private String USER = "OneClub_eageryouth";
     private String PASS = "54ea9f561354ab5ddbf7efc205fd9a4d357bf3f5";
-    private int PORT = 61001;
 
     Usuario user = new Usuario();
     Connection conn;
@@ -72,10 +71,21 @@ public class Auth {
     }
 
 
-    public void registro(Usuario usuario) throws SQLException {
+    public void registro(Usuario usuario, String sede) throws SQLException {
         try {
             String sql = "INSERT INTO usuario (nombre, apellido, email, password_hash, telefono, rol, sede_id, activo, created_at, updated_at) " + "VALUES (?, ?, ?, ?, ?, ?, ?, ?, NOW(), NOW())";
-            int resultado = ps.executeUpdate(sql);
+            int resultado = 0;
+
+            usuario.setSedeID(encontrarSedeID(sede));
+            ps.setString(1,usuario.getNombre());
+            ps.setString(2, usuario.getApellido());
+            ps.setString(3,usuario.getEmail());
+            ps.setString(4, usuario.getPasswordHash());
+            ps.setString(5, usuario.getRol());
+            ps.setLong(6,usuario.getSedeID());
+            ps.setLong(7,usuario.getActivo());
+
+            resultado = ps.executeUpdate(sql);
 
             if (resultado == 1) {
                 System.out.println("[Usuario creado correctamente]");
@@ -87,8 +97,30 @@ public class Auth {
         }
     }
 
-    public int encontrarSedeID() {
-        String sql = "SELECT";
-        return 1;
+    public long encontrarSedeID(String sede) throws SQLException {
+
+        String sql = "SELECT u.sede_ic\n" +
+                "FROM usuario u\n" +
+                "INNER JOIN sede s ON u.sede_ic = s.id\n" +
+                "WHERE s.nombre = ?;";
+
+        long resultado = 0;
+
+        try {
+            ps = conn.prepareStatement(sql);
+            ps.setString(1, sede);
+
+            if(!rs.next()) {
+                System.out.println("[No se encontro ninguna sede]");
+            } else {
+                System.out.println("[Sede encontrada " + sede + "]");
+                resultado = rs.getInt("sede_id");
+            }
+
+        } catch (Exception e) {
+            System.err.println("Error en encontrar la sede " + e.getMessage());
+        }
+
+        return resultado;
     }
 }
