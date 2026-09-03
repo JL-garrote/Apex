@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+
+<AnchorPane prefHeight="563.0" prefWidth="600.0" stylesheets="@fondo.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.apex.Controller.AuthController">
+    <children>
+
+        <!-- Contenedor que ocupa toda la ventana y centra la tarjeta de login -->
+        <StackPane layoutY="-58.0" prefHeight="621.0" prefWidth="600.0" styleClass="form-container" stylesheets="@registe.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="532.0" prefWidth="516.0" style="-fx-background-color: #CBD5E1; -fx-background-radius: 20;" styleClass="panel-login" stylesheets="@registe.css">
+                    <children>
+                        <Button fx:id="botonLogin" layoutX="123.0" layoutY="471.0" mnemonicParsing="false" onAction="#log" styleClass="btn-register" stylesheets="@registe.css" text="Register" />
+                        <Label layoutX="45.0" layoutY="294.0" prefHeight="38.0" prefWidth="98.0" styleClass="label-text" stylesheets="@fondo.css" text="Contraseña" />
+                        <PasswordField fx:id="passfield" layoutX="31.0" layoutY="332.0" prefHeight="40.0" prefWidth="282.0" styleClass="text-field" stylesheets="@field.css" />
+                        <TextField fx:id="emailfield" layoutX="31.0" layoutY="254.0" prefHeight="40.0" prefWidth="282.0" styleClass="text-field" stylesheets="@field.css" />
+                        <Label layoutX="43.0" layoutY="228.0" styleClass="label-text" stylesheets="@fondo.css" text="Correo Electronico" />
+                        <Label layoutX="88.0" layoutY="22.0" prefHeight="45.0" prefWidth="168.0" style="-fx-font-size: 30;" styleClass="title-label" stylesheets="@fondo.css" text="Bienvenido" textAlignment="CENTER" />
+                  <TextField fx:id="emailfield1" layoutX="31.0" layoutY="179.0" prefHeight="40.0" prefWidth="282.0" styleClass="text-field" stylesheets="@field.css" />
+                  <Label layoutX="43.0" layoutY="155.0" styleClass="label-text" stylesheets="@fondo.css" text="Apellido" />
+                  <TextField fx:id="emailfield11" layoutX="31.0" layoutY="105.0" prefHeight="40.0" prefWidth="282.0" styleClass="text-field" stylesheets="@registe.css" />
+                  <Label layoutX="43.0" layoutY="80.0" styleClass="label-text" stylesheets="@fondo.css" text="Nombre" />
+                  <Label layoutX="43.0" layoutY="372.0" prefHeight="38.0" prefWidth="98.0" styleClass="label-text" stylesheets="@fondo.css" text="Telefono" />
+                  <PasswordField fx:id="passfield1" layoutX="31.0" layoutY="410.0" prefHeight="40.0" prefWidth="282.0" stylesheets="@field.css" />
+                  <RadioButton layoutX="358.0" layoutY="188.0" mnemonicParsing="false" stylesheets="@fondo.css" text="Coordinador" />
+                  <RadioButton layoutX="358.0" layoutY="217.0" mnemonicParsing="false" stylesheets="@fondo.css" text="Instructor" />
+                  <RadioButton layoutX="358.0" layoutY="246.0" mnemonicParsing="false" stylesheets="@fondo.css" text="Tutor" />
+                  <Label layoutX="379.0" layoutY="133.0" prefHeight="38.0" prefWidth="98.0" styleClass="title-label" stylesheets="@fondo.css" text="Rol" />
+                  <Label layoutX="360.0" layoutY="293.0" prefHeight="38.0" prefWidth="98.0" styleClass="label-text" stylesheets="@fondo.css" text="Sede/escuela" />
+                  <PasswordField fx:id="passfield2" layoutX="332.0" layoutY="332.0" prefHeight="40.0" prefWidth="159.0" styleClass="text-field" stylesheets="@field.css" />
+                    </children>
+                </Pane>
+            </children>
+        </StackPane>
+
+    </children>
+</AnchorPane>

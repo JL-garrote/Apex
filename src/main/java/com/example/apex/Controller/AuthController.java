@@ -5,32 +5,32 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.control.PasswordField;
-import javafx.scene.control.ToggleButton;
-import javafx.scene.layout.StackPane;
+import javafx.scene.transform.Scale;
 import javafx.stage.Stage;
 
+import java.awt.event.ActionEvent;
 import java.io.File;
 import java.io.IOException;
 import java.sql.SQLException;
 
 public class AuthController {
 
-    @FXML
-    StackPane rootPane;
+    private static final double BASE_WIDTH = 600.0;
+    private static final double BASE_HEIGHT = 563.0;
+    private static final double MIN_SCALE = 0.85;
+    private static final double MAX_SCALE = 1.4;
 
     @FXML
-    TextField loginEmailField;
+    PasswordField passfield;
 
     @FXML
-    PasswordField loginPasswordField;
+    TextField emailfield;
 
     @FXML
-    ToggleButton registerTabButton;
-
-    @FXML
-    ToggleButton loginTabButton;
+    Button botonRegistro;
 
     Auth autorizarAcceso = new Auth();
 
@@ -39,40 +39,28 @@ public class AuthController {
 
     public void log() {
         try {
-            autorizarAcceso.login(loginEmailField.getText(),loginPasswordField.getText());
+            autorizarAcceso.login(emailfield.getText(),passfield.getText());
         } catch (Exception e) {
-            System.err.println("Error en el controlador");
+            System.err.println("Error en el controlador " + e.getMessage());
         }
     }
 
     @FXML
     public void cambiarView() throws IOException {
-        if(registerTabButton.isSelected()) {
-            File fxml = new File("src/main/resources/com/example/apex/register.fxml");
+        String rutaRegister = "/com/example/apex/register.fxml";
+        File fxml = new File(rutaRegister);
 
-            if(fxml.exists()) {
-                System.out.println("El archivo existe");
-            } else  {
-                System.out.println("no existe");
-            }
-
-            String rutaRegister = "/com/example/apex/register.fxml";
-
-            FXMLLoader loader = new FXMLLoader(getClass().getResource(rutaRegister));
-            Parent root = loader.load();
-
-            Stage stage = (Stage) rootPane.getScene().getWindow();
-            stage.setScene(new Scene(root));
-            stage.show();
-        } else if(loginTabButton.isSelected()){
-            String rutaLogin = "/com/example/apex/login.fxml";
-
-            FXMLLoader loader = new FXMLLoader(getClass().getResource(rutaLogin));
-            Parent root = loader.load();
-
-            Stage stage = (Stage) rootPane.getScene().getWindow();
-            stage.setScene(new Scene(root));
-            stage.show();
+        if(fxml.exists()) {
+            System.out.println("El archivo existe");
+        } else {
+            System.out.println("El archivo no existe");
         }
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource(rutaRegister));
+        Parent root = loader.load();
+
+        Stage stage = (Stage) botonRegistro.getScene().getWindow();
+        stage.setScene(new Scene(root));
+        stage.show();
     }
 }

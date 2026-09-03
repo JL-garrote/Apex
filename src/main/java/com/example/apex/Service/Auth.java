@@ -86,4 +86,9 @@ public class Auth {
             System.out.println("Error de sql en la clase Auth " + e.getMessage());
         }
     }
+
+    public int encontrarSedeID() {
+        String sql = "SELECT";
+        return 1;
+    }
 }

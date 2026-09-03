@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.StackPane?>
 
-<AnchorPane prefHeight="563.0" prefWidth="600.0" stylesheets="@fondo.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="563.0" prefWidth="600.0" stylesheets="@fondo.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.apex.Controller.AuthController">
     <children>
 
         <!-- Contenedor que ocupa toda la ventana y centra la tarjeta de login -->
@@ -18,10 +18,10 @@
             <children>
                 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="318.0" prefWidth="344.0" style="-fx-background-color: #CBD5E1; -fx-background-radius: 20;" styleClass="panel-login" stylesheets="@fondo.css">
                     <children>
-                        <Button id="botonLogin" layoutX="132.0" layoutY="250.0" mnemonicParsing="false" stylesheets="@login.css" text="Login" />
+                        <Button fx:id="botonLogin" layoutX="132.0" layoutY="250.0" mnemonicParsing="false" stylesheets="@login.css" text="Login" onAction="#log"/>
                         <Label layoutX="43.0" layoutY="158.0" prefHeight="38.0" prefWidth="98.0" styleClass="label-text" stylesheets="@fondo.css" text="Contraseña" />
-                        <PasswordField id="passfield" layoutX="31.0" layoutY="196.0" prefHeight="40.0" prefWidth="282.0" stylesheets="@field.css" />
-                        <TextField id="emailfield" layoutX="31.0" layoutY="113.0" prefHeight="40.0" prefWidth="282.0" stylesheets="@field.css" />
+                        <PasswordField fx:id="passfield" layoutX="31.0" layoutY="196.0" prefHeight="40.0" prefWidth="282.0" stylesheets="@field.css" />
+                        <TextField fx:id="emailfield" layoutX="31.0" layoutY="113.0" prefHeight="40.0" prefWidth="282.0" stylesheets="@field.css" />
                         <Label layoutX="43.0" layoutY="80.0" styleClass="label-text" stylesheets="@fondo.css" text="Correo Electronico" />
                         <Label layoutX="15.0" layoutY="29.0" prefHeight="37.0" prefWidth="314.0" style="-fx-font-size: 30;" styleClass="title-label" stylesheets="@fondo.css" text="Bienvenido de vuelta" />
                     </children>
@@ -29,7 +29,7 @@
             </children>
         </StackPane>
 
-        <Button id="botonRegistro" mnemonicParsing="false" stylesheets="@login.css" text="Register" AnchorPane.bottomAnchor="52.0" AnchorPane.leftAnchor="14.0" />
+        <Button fx:id="botonRegistro" mnemonicParsing="false" stylesheets="@login.css" text="Register" AnchorPane.bottomAnchor="52.0" AnchorPane.leftAnchor="14.0" onAction="#cambiarView"/>
 
         <ImageView fitHeight="118.0" fitWidth="121.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
             <image>

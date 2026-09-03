@@ -12,6 +12,7 @@ module com.example.apex {
     requires com.almasb.fxgl.all;
     requires java.sql;
     requires java.desktop;
+    requires javafx.graphics;
 
     opens com.example.apex to javafx.fxml;
     exports com.example.apex;

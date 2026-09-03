@@ -49,3 +49,43 @@
 .secondary-button:hover {
     -fx-background-color: #F1F5F9;
 }
+
+.radio-button {
+    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-font-size: 14px;
+    -fx-text-fill: #333333;
+    -fx-cursor: hand;
+}
+
+.radio-button .radio {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #b0b0b0;
+    -fx-border-width: 2px;
+    -fx-border-radius: 50%;
+    -fx-background-radius: 50%;
+    -fx-padding: 4px;
+}
+
+.radio-button:hover .radio {
+    -fx-border-color: #4a90d9;
+}
+
+.radio-button:selected .radio {
+    -fx-border-color: #4a90d9;
+    -fx-background-color: #ffffff;
+}
+
+.radio-button:selected .dot {
+    -fx-background-color: #4a90d9;
+    -fx-background-insets: 0;
+    -fx-padding: 4px;
+}
+
+.radio-button:focused .radio {
+    -fx-border-color: #2f6fb0;
+    -fx-effect: dropshadow(gaussian, rgba(74,144,217,0.4), 4, 0, 0, 0);
+}
+
+.radio-button:disabled {
+    -fx-opacity: 0.5;
+}

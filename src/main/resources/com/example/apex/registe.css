@@ -1,0 +1,108 @@
+/* ===== Contenedor principal (el panel gris claro) ===== */
+.form-container {
+    -fx-background-color: linear-gradient(to bottom right, #eef1f7, #dde3ee);
+    -fx-background-radius: 16px;
+    -fx-padding: 40px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 20, 0, 0, 6);
+}
+
+/* Fondo exterior tipo tarjeta blanca */
+.root-pane {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 20px;
+}
+
+/* ===== Título "Bienvenido" ===== */
+.title-label {
+    -fx-font-family: "Segoe UI Semibold", sans-serif;
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1a1f36;
+}
+
+/* ===== Etiquetas de campos (Nombre, Apellido, etc.) ===== */
+.field-label {
+    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-font-size: 13px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #3b4256;
+}
+
+/* ===== Campos de texto ===== */
+.text-field, .password-field {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
+    -fx-border-color: #d3d8e2;
+    -fx-border-width: 1px;
+    -fx-padding: 10px 12px;
+    -fx-font-size: 13px;
+    -fx-text-fill: #1a1f36;
+    -fx-prompt-text-fill: #9aa2b1;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.04), 2, 0, 0, 1);
+}
+
+.text-field:focused, .password-field:focused {
+    -fx-border-color: #4a6cf7;
+    -fx-border-width: 1.5px;
+    -fx-effect: dropshadow(gaussian, rgba(74,108,247,0.25), 6, 0, 0, 0);
+}
+
+/* ===== RadioButtons (Coordinador, Instructor, Tutor) ===== */
+.radio-button {
+    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-font-size: 13px;
+    -fx-text-fill: #3b4256;
+    -fx-cursor: hand;
+}
+
+.radio-button .radio {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #b7bfcf;
+    -fx-border-width: 1.5px;
+    -fx-border-radius: 50%;
+    -fx-background-radius: 50%;
+    -fx-padding: 5px;
+}
+
+.radio-button:hover .radio {
+    -fx-border-color: #4a6cf7;
+}
+
+.radio-button:selected .dot {
+    -fx-background-color: #4a6cf7;
+    -fx-padding: 4px;
+}
+
+/* ===== Botones ===== */
+.button {
+    -fx-font-family: "Segoe UI Semibold", sans-serif;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-background-radius: 8px;
+    -fx-padding: 10px 26px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 4, 0, 0, 2);
+}
+
+.btn-login {
+    -fx-background-color: linear-gradient(to bottom right, #4a6cf7, #3554d1);
+}
+
+.btn-login:hover {
+    -fx-background-color: linear-gradient(to bottom right, #3554d1, #2a45b3);
+}
+
+.btn-register {
+    -fx-background-color: linear-gradient(to bottom right, #5b7cfa, #4a6cf7);
+}
+
+.btn-register:hover {
+    -fx-background-color: linear-gradient(to bottom right, #4a6cf7, #3554d1);
+}
+
+.button:pressed {
+    -fx-effect: none;
+    -fx-translate-y: 1px;
+}
