@@ -1,21 +1,19 @@
 package com.example.apex.Model;
 
-public class Sede {
+public class Disciplina {
 
     private long id;
     private String nombre;
-    private String direccion;
-    private String telefono;
+    private String descripcion;
     private int activo;
 
-    public Sede() {
+    public Disciplina() {
     }
 
-    public Sede(long id, String nombre, String direccion, String telefono, int activo) {
+    public Disciplina(long id, String nombre, String descripcion, int activo) {
         this.id = id;
         this.nombre = nombre;
-        this.direccion = direccion;
-        this.telefono = telefono;
+        this.descripcion = descripcion;
         this.activo = activo;
     }
 
@@ -35,20 +33,12 @@ public class Sede {
         this.nombre = nombre;
     }
 
-    public String getDireccion() {
-        return direccion;
+    public String getDescripcion() {
+        return descripcion;
     }
 
-    public void setDireccion(String direccion) {
-        this.direccion = direccion;
-    }
-
-    public String getTelefono() {
-        return telefono;
-    }
-
-    public void setTelefono(String telefono) {
-        this.telefono = telefono;
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
     }
 
     public int getActivo() {
